@@ -11,3 +11,83 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.botscontainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgb(4,71,28);
+}
+
+.bot_container{
+  width: 250px;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 13px;
+  background-color: rgb(13,40,24);
+  color: #fff;
+  text-align: left;
+}
+
+.bot_container p{
+  word-wrap: break-word; 
+  overflow-wrap: break-word; 
+}
+
+.condition{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 10px;
+  border: 2px solid #000;
+}
+
+.avatar{
+  width: 100%;
+}
+
+.bot_heading{
+  margin: 5px;
+}
+
+.damage_bad{
+  color: red;
+}
+
+.damage_good{
+  color: blue;
+}
+
+.health_good{
+  color: blue;
+}
+
+.health_critical{
+  color: orange;
+}
+
+.army_container{
+  width: 250px;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 13px;
+  background-color: rgb(4,71,28);
+  color: #fff;
+  text-align: left;
+}
+
+.army_container p{
+  word-wrap: break-word; 
+  overflow-wrap: break-word; 
+}
+
+.armycontainer{
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  justify-content: center;
+  background-color: rgb(13,40,24);
+}

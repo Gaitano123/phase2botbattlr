@@ -5,7 +5,7 @@ function BotIcon({ botClass }){
     let icon = ""
 
     if(botClass === "Support"){
-        icon = <i class="fa-solid fa-handshake-angle"></i>
+        icon = <i class="fa-solid fa-hand-fist"></i>
     } else if(botClass === "Assault"){
         icon = <i class="fa-solid fa-gun"></i>
     }else if(botClass === "Medic"){
