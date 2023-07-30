@@ -1,15 +1,21 @@
 import React, { useState, useEffect } from "react";
 import BotsProfile from "./BotsProfile";
 import Army from "./Army";
+import Sort from "../Sort";
 
 function App(){
     const [bots, setBots] = useState([])
     const [army, setArmy] = useState([])
+    const [sortBot, setSortBot] = useState(null)
+    const [loading, setLoading] = useState(true)
 
     function fetchBots(){
         fetch('https://bots-6i0k.onrender.com/bots')
         .then(response => response.json())
-        .then(data => setBots(data))
+        .then(data => {
+            setBots(data)
+            setLoading(false)
+        })
     }
 
     function fetchArmy(){
@@ -79,10 +85,19 @@ function App(){
         });
     }
 
+    function handleSort(sortBot){
+        setSortBot(sortBot)
+    }
+
     return (
         <div>
             <Army army={army} handleClick={deleteArmy}/>
-            <BotsProfile bots={bots} handleDelete={handleDelete} handleClick={addArmy}/>
+            <Sort onSort={handleSort}/>
+            {loading ? (
+                <h1 className="loading">loading...</h1>
+            ) :(
+                <BotsProfile bots={bots} handleDelete={handleDelete} handleClick={addArmy} sortBot={sortBot}/>
+            )}
         </div>
     )
 }

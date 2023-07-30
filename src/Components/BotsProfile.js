@@ -3,10 +3,18 @@ import BotIcon from "./BotData/BotIcon";
 import BotDamage from "./BotData/BotDamage";
 import BotHealth from "./BotData/BotHealth";
 
-function BotsProfile({ bots, handleDelete, handleClick }){
-    
+function BotsProfile({ bots, handleDelete, handleClick, sortBot }){
 
-    const botInfo =  bots.map((bot) => (
+    const sortedBots = [...bots];
+    if (sortBot === "health") {
+      sortedBots.sort((a, b) => b.health - a.health);
+    } else if (sortBot === "damage") {
+      sortedBots.sort((a, b) => b.damage - a.damage);
+    } else if (sortBot === "armor") {
+      sortedBots.sort((a, b) => b.armor - a.armor);
+    }
+    
+    const botInfo =  sortedBots.map((bot) => (
         <div key={bot.id} className="bot_container">
             <div onClick={()=> handleClick(bot)}>
                 <img className="avatar" src={bot.avatar_url} alt={`Avatar of ${bot.name}`} />

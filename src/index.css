@@ -5,12 +5,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(4,71,28);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 
 .botscontainer{
   display: flex;
@@ -108,4 +110,25 @@ code {
   justify-content: center;
   font-weight: bold;
   font-size: 20px;
+}
+
+.sort_section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(4,71,28);
+  color: #fff;
+  margin: 4px;
+}
+.form-select{
+  width: 450px;
+  margin: 3px;
+}
+
+.loading{
+  font-size: 50px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 30vh;
 }
