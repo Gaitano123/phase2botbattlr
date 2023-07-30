@@ -2,7 +2,7 @@ import React from "react";
 
 function ArmyHealth({ health }){
     let result =""
-    if(health >=45){
+    if(health >=50){
         result = <p className="health_good"><i class="fa-solid fa-bolt-lightning"></i>{health}</p>
     }else{
         result = <p className="health_critical"><i class="fa-solid fa-bolt-lightning"></i>{health}</p>

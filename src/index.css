@@ -86,8 +86,26 @@ code {
 .armycontainer{
   padding: 10px;
   display: flex;
-  flex-direction: row;
+  align-items: center;
   overflow-x: scroll;
-  justify-content: center;
+}
+
+.army_heading{
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  padding: 10px;
+}
+
+.army_can{
   background-color: rgb(13,40,24);
+  display: flex;
+  flex-direction: column;
+}
+
+.delete{
+  width: 100%;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
 }
