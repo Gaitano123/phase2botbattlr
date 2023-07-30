@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import BotIcon from "./BotIcon";
-import BotDamage from "./BotDamage";
-import BotHealth from "./BotHealth";
+import BotIcon from "./BotData/BotIcon";
+import BotDamage from "./BotData/BotDamage";
+import BotHealth from "./BotData/BotHealth";
 
 function BotsProfile({ bots, handleDelete, handleClick }){
     

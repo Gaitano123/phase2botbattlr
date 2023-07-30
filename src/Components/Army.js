@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import ArmyDamage from "./ArmyDamage";
-import ArmyHealth from "./ArmyHealth";
-import ArmyIcon from "./ArmyIcon";
+import ArmyDamage from "./ArmyData/ArmyDamage";
+import ArmyHealth from "./ArmyData/ArmyHealth";
+import ArmyIcon from "./ArmyData/ArmyIcon";
 
 function Army({ army, handleClick }){
 
