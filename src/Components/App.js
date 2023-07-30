@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import BotsProfile from "./BotsProfile";
 import Army from "./Army";
-import View from "../Data/View";
-import { Routes, Route } from "react-router-dom"
 
 function App(){
     const [bots, setBots] = useState([])
@@ -85,9 +83,6 @@ function App(){
         <div>
             <Army army={army} handleClick={deleteArmy}/>
             <BotsProfile bots={bots} handleDelete={handleDelete} handleClick={addArmy}/>
-            <Routes>
-                <Route exact path="/view" element={<View />} />
-            </Routes>
         </div>
     )
 }
