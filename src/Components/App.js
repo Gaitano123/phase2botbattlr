@@ -1,19 +1,21 @@
 import React, { useState, useEffect } from "react";
 import BotsProfile from "./BotsProfile";
 import Army from "./Army";
+import View from "../Data/View";
+import { Routes, Route } from "react-router-dom"
 
 function App(){
     const [bots, setBots] = useState([])
     const [army, setArmy] = useState([])
 
     function fetchBots(){
-        fetch('http://localhost:3000/bots')
+        fetch('https://bots-6i0k.onrender.com/bots')
         .then(response => response.json())
         .then(data => setBots(data))
     }
 
     function fetchArmy(){
-        fetch('http://localhost:4000/Army')
+        fetch('https://army-7k3t.onrender.com/Army')
         .then(res => res.json())
         .then(data => {
             setArmy(data)
@@ -27,7 +29,7 @@ function App(){
 
     function handleDelete(botToDelete){
 
-        fetch(`http://localhost:3000/bots${botToDelete.id}`,{
+        fetch(`https://bots-6i0k.onrender.com/bots${botToDelete.id}`,{
             method: 'DELETE',
             headers:{
                 "content-type": "application/json"
@@ -46,7 +48,7 @@ function App(){
     function addArmy(bot){
 
         if (!army.find((armyBot) => armyBot.id === bot.id)) {
-            fetch('http://localhost:4000/Army',{
+            fetch('https://army-7k3t.onrender.com/Army',{
                 method: 'POST',
                 headers:{
                     "content-type": "application/json",
@@ -63,7 +65,7 @@ function App(){
 
     function deleteArmy(armyToDelete){
 
-        fetch(`http://localhost:4000/Army/${armyToDelete.id}`,{
+        fetch(`https://army-7k3t.onrender.com/Army/${armyToDelete.id}`,{
             method: 'DELETE',
             headers:{
                 "content-type": "application/json"
@@ -83,6 +85,9 @@ function App(){
         <div>
             <Army army={army} handleClick={deleteArmy}/>
             <BotsProfile bots={bots} handleDelete={handleDelete} handleClick={addArmy}/>
+            <Routes>
+                <Route exact path="/view" element={<View />} />
+            </Routes>
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import BotIcon from "./BotData/BotIcon";
 import BotDamage from "./BotData/BotDamage";
 import BotHealth from "./BotData/BotHealth";

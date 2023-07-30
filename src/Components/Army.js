@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import ArmyDamage from "./ArmyData/ArmyDamage";
 import ArmyHealth from "./ArmyData/ArmyHealth";
 import ArmyIcon from "./ArmyData/ArmyIcon";
